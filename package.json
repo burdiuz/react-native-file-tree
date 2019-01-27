@@ -1,0 +1,14 @@
+{
+  "name": "@actualwave/react-native-file-tree",
+  "version": "0.0.1",
+  "private": true,
+  "main": "source/index.js",
+  "dependencies": {
+    "react": "file:../RNTestApp/node_modules/react",
+    "react-native": "file:../RNTestApp/node_modules/react-native",
+    "prop-types": "file:../RNTestApp/node_modules/prop-types",
+    "@actualwave/react-native-kingnare-style": "file:../RNTestApp/node_modules/@actualwave/react-native-kingnare-style",
+    "react-native-vector-icons": "file:../RNTestApp/node_modules/react-native-vector-icons",
+    "@actualwave/react-native-vertical-list": "file:../react-native-vertical-list"
+  }
+}

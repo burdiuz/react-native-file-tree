@@ -13,6 +13,7 @@ export const fileRowStyles = StyleSheet.create({
   },
   info: {
     flexDirection: 'row',
+    alignItems: 'flex-end',
   },
   buttons: {
     flexDirection: 'row',

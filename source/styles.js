@@ -12,11 +12,13 @@ export const fileRowStyles = StyleSheet.create({
     flex: 1,
   },
   info: {
+    flex: 1,
     flexDirection: 'row',
     alignItems: 'flex-end',
   },
   buttons: {
     flexDirection: 'row',
+    paddingLeft: 10,
   },
 });
 

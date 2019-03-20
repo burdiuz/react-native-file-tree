@@ -43,11 +43,11 @@ export const directoryTitleRenderer = (item, props) => {
   let length = contentLength;
   let counter = null;
 
-  if (isNaN(length) && content) {
-    length = content.length;
+  if (Number.isNaN(length) && content) {
+    ({ length } = content);
   }
 
-  if (!isNaN(length)) {
+  if (!Number.isNaN(length)) {
     counter = <Text style={{ color: 0x505050ff }}> ({length || '0'})</Text>;
   }
 

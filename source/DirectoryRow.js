@@ -51,8 +51,8 @@ const DirectoryRow = (props) => {
   return (
     <>
       {row}
-      {content}
       {children}
+      {content}
     </>
   );
 };

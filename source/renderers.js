@@ -15,7 +15,7 @@ import Files from './Files';
 export const fileIconRenderer = () => (
   <FontFamily name="file-text-o" size={20} color="#ccc" style={fileRowStyles.icon} />
 );
-export const fileTitleRenderer = ({ name }) => <Text style={fileRowStyles.title}>{name}</Text>;
+export const fileTitleRenderer = ({ name }) => <Text style={fileRowStyles.title} numberOfLines={1}>{name}</Text>;
 export const fileButtonsRenderer = () => null;
 
 // Directory renderers
@@ -48,7 +48,7 @@ export const directoryTitleRenderer = (item, props) => {
   }
 
   if (!Number.isNaN(length)) {
-    counter = <Text style={{ color: 0x505050ff }}> ({length || '0'})</Text>;
+    counter = <Text style={folderRowStyles.counter}> ({length || '0'})</Text>;
   }
 
   if (getItemType(item) === DIRECTORY_TYPE) {

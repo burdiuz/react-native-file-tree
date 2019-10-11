@@ -27,7 +27,10 @@ export const folderRowStyles = StyleSheet.create({
   title: StyleSheet.flatten([fileRowStyles.title, {}]),
   container: StyleSheet.flatten([fileRowStyles.container, {}]),
   contents: {
-    marginBottom: 5,
+    //marginBottom: 5,
+  },
+  counter: {
+    color: 0x505050ff,
   },
 });
 

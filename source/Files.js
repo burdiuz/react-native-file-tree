@@ -10,11 +10,14 @@ import { filesItemRenderer, filesEmptyRenderer } from './renderers';
 import { filesStyles } from './styles';
 
 const Files = (props) => {
-  const { style, children, itemRenderer, emptyRenderer, items, ...itemProps } = props;
+  const { listItemFilter, itemRenderer, emptyRenderer } = props;
+
+  const { style, children, ...itemProps } = props;
 
   return (
     <VerticalList
       {...props}
+      filter={listItemFilter}
       itemRenderer={(item, index) => itemRenderer(item, index, itemProps)}
       emptyRenderer={() => (emptyRenderer ? emptyRenderer(props) : null)}
       style={[filesStyles.files, style]}
@@ -33,6 +36,7 @@ Files.propTypes = {
   ),
   touchable: PropTypes.bool,
   children: PropTypes.node,
+  listItemFilter: PropTypes.func,
   getItemType: PropTypes.func,
   itemRenderer: PropTypes.func,
   emptyRenderer: PropTypes.func,
@@ -43,6 +47,7 @@ Files.defaultProps = {
   items: undefined,
   touchable: false,
   children: undefined,
+  listItemFilter: undefined,
   itemRenderer: filesItemRenderer,
   emptyRenderer: filesEmptyRenderer,
 };

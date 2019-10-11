@@ -67,33 +67,8 @@ export const directoryButtonsRenderer = () => null;
 
 export const defaultContainerRenderer = (row) => row;
 
-export const directoryContentRenderer = ({
-  touchable,
-  iconRenderer,
-  titleRenderer,
-  buttonsRenderer,
-  itemRenderer,
-  emptyRenderer,
-  containerRenderer,
-  contentRenderer,
-  getItemType,
-  content,
-}) => {
-  return (
-    <Files
-      items={content}
-      touchable={touchable}
-      getItemType={getItemType}
-      iconRenderer={iconRenderer}
-      titleRenderer={titleRenderer}
-      buttonsRenderer={buttonsRenderer}
-      itemRenderer={itemRenderer}
-      emptyRenderer={emptyRenderer}
-      containerRenderer={containerRenderer}
-      contentRenderer={contentRenderer}
-      style={folderRowStyles.contents}
-    />
-  );
+export const directoryContentRenderer = ({ content, ...props }) => {
+  return <Files {...props} items={content} style={folderRowStyles.contents} />;
 };
 
 // Files list renderers

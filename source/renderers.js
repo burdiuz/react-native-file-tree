@@ -92,7 +92,7 @@ export const filesItemRenderer = (item, index, props) => {
       return <Text>Entity of unknown type received.</Text>;
   }
 
-  return <Component {...props} style={style} key={item.name || index} item={item} />;
+  return <Component {...props} style={style} key={item.path || item.name || index} item={item} />;
 };
 
 export const filesEmptyRenderer = () => (

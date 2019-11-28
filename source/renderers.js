@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { View } from 'react-native';
 import { Text } from '@actualwave/react-native-kingnare-style';
 import FontFamily from 'react-native-vector-icons/FontAwesome';
 
-import { DIRECTORY_TYPE, FILE_TYPE, getItemType } from './constants';
+import { DIRECTORY_TYPE, FILE_TYPE } from './constants';
 import { fileRowStyles, folderRowStyles, filesStyles } from './styles';
 import FileRow from './FileRow';
 import DirectoryRow from './DirectoryRow';
@@ -34,7 +33,7 @@ export const directoryIconRenderer = (item, props) => {
     );
   }
 
-  return fileIconRenderer(item, props);
+  return fileIconRenderer();
 };
 
 export const directoryTitleRenderer = (item, props) => {
@@ -60,7 +59,7 @@ export const directoryTitleRenderer = (item, props) => {
     );
   }
 
-  return fileTitleRenderer(item, props);
+  return fileTitleRenderer(item);
 };
 
 export const directoryButtonsRenderer = () => null;

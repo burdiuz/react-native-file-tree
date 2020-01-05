@@ -4,11 +4,13 @@
   "private": true,
   "main": "source/index.js",
   "dependencies": {
-    "react": "file:../RNTestApp/node_modules/react",
-    "react-native": "file:../RNTestApp/node_modules/react-native",
-    "prop-types": "file:../RNTestApp/node_modules/prop-types",
-    "@actualwave/react-native-kingnare-style": "file:../RNTestApp/node_modules/@actualwave/react-native-kingnare-style",
-    "react-native-vector-icons": "file:../RNTestApp/node_modules/react-native-vector-icons",
-    "@actualwave/react-native-vertical-list": "file:../react-native-vertical-list"
+    "@actualwave/react-native-kingnare-style": "^0.0.4",
+    "@actualwave/react-native-vertical-list": "github:burdiuz/react-native-vertical-list#master",
+    "react-native-vector-icons": "^6.6.0"
+  },
+  "peerDependencies": {
+    "prop-types": "*",
+    "react": "*",
+    "react-native": "*"
   }
 }
